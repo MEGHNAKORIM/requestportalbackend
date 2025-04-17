@@ -16,7 +16,7 @@ if (!fs.existsSync(uploadDir)) {
 dotenv.config({ path: './config/config.env' });
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI||5000)
+mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log('MongoDB Connection Error:', err));
 
